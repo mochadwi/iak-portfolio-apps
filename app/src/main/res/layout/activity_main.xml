@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.mochadwi.portfolioapps.MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_user_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="@id/gd_hor_50"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/gd_ver_50"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_normal"
+        android:layout_marginLeft="@dimen/padding_normal"
+        android:text="Nama"
+        app:layout_constraintBottom_toTopOf="@+id/tv_user_birthdate"
+        app:layout_constraintLeft_toRightOf="@+id/gd_ver_50" />
+
+    <TextView
+        android:id="@+id/tv_user_birthdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TTL"
+        app:layout_constraintBottom_toBottomOf="@+id/gd_hor_50"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_user_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_user_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_normal"
+        android:text="Alamat"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_user_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_user_birthdate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_normal"
+        android:text=":"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_user_name"
+        app:layout_constraintLeft_toRightOf="@+id/tv_user_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_normal"
+        android:text=":"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_user_birthdate"
+        app:layout_constraintLeft_toRightOf="@+id/tv_user_name" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_normal"
+        android:text=":"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_user_address"
+        app:layout_constraintLeft_toRightOf="@+id/tv_user_name" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gd_hor_50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gd_ver_50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/gd_ver_65"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+</android.support.constraint.ConstraintLayout>
