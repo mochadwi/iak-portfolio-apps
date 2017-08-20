@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Portfolio Apps</string>
+    <string name="lbl_skill">Skill</string>
+    <string name="lbl_name">Nama</string>
+    <string name="lbl_birthdate">TTL</string>
+    <string name="lbl_address">Alamat</string>
+    <string name="lbl_colon">:</string>
+    <string name="lbl_education">Education</string>
 </resources>

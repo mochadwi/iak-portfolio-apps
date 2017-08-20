@@ -11,9 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_launcher"
-        app:layout_constraintBottom_toBottomOf="@id/gd_hor_50"
+        app:layout_constraintBottom_toTopOf="@+id/gd_hor_50"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="@+id/gd_ver_50"
+        app:layout_constraintRight_toLeftOf="@+id/gd_ver_50"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -21,17 +21,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/padding_normal"
-        android:layout_marginLeft="@dimen/padding_normal"
-        android:text="Nama"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginStart="@dimen/padding_small"
+        android:text="@string/lbl_name"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/tv_user_birthdate"
-        app:layout_constraintLeft_toRightOf="@+id/gd_ver_50" />
+        app:layout_constraintLeft_toLeftOf="@+id/gd_ver_50" />
 
     <TextView
         android:id="@+id/tv_user_birthdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TTL"
-        app:layout_constraintBottom_toBottomOf="@+id/gd_hor_50"
+        android:text="@string/lbl_birthdate"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/gd_hor_50"
         app:layout_constraintLeft_toLeftOf="@+id/tv_user_name"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,54 +43,125 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/padding_normal"
-        android:text="Alamat"
+        android:text="@string/lbl_address"
+        android:textColor="@android:color/white"
         app:layout_constraintLeft_toLeftOf="@+id/tv_user_name"
         app:layout_constraintTop_toBottomOf="@+id/tv_user_birthdate" />
 
     <TextView
+        android:id="@+id/tv_div_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/padding_normal"
-        android:text=":"
+        android:text="@string/lbl_colon"
+        android:textColor="@android:color/white"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_user_name"
-        app:layout_constraintLeft_toRightOf="@+id/tv_user_name" />
+        app:layout_constraintLeft_toLeftOf="@+id/gd_ver_65" />
 
     <TextView
+        android:id="@+id/tv_div_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/padding_normal"
-        android:text=":"
+        android:text="@string/lbl_colon"
+        android:textColor="@android:color/white"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_user_birthdate"
-        app:layout_constraintLeft_toRightOf="@+id/tv_user_name" />
+        app:layout_constraintLeft_toLeftOf="@+id/tv_div_1" />
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/padding_normal"
-        android:text=":"
+        android:text="@string/lbl_colon"
+        android:textColor="@android:color/white"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_user_address"
-        app:layout_constraintLeft_toRightOf="@+id/tv_user_name" />
+        app:layout_constraintLeft_toLeftOf="@+id/tv_div_1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginStart="@dimen/padding_small"
+        android:text="@string/app_name"
+        android:textColor="@android:color/white"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_user_name"
+        app:layout_constraintLeft_toRightOf="@+id/tv_div_1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_small"
+        android:text="@string/lbl_skill"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_size_large"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/gd_ver_50"
+        app:layout_constraintTop_toTopOf="@+id/gd_hor_50" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_small"
+        android:text="@string/lbl_education"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/font_size_large"
+        app:layout_constraintLeft_toLeftOf="@+id/gd_ver_50"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gd_hor_50" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        android:elevation="-1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gd_hor_50"
+        app:layout_constraintLeft_toLeftOf="@+id/gd_ver_50"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorAccent"
+        android:elevation="-1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/gd_ver_50"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gd_hor_50" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="-1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/gd_ver_50"
+        app:layout_constraintTop_toTopOf="@+id/gd_hor_50" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gd_hor_50"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.5"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="256dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gd_ver_50"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_percent="0.5"
+        tools:layout_editor_absoluteX="192dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/gd_ver_65"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.65" />
+        app:layout_constraintGuide_percent="0.65"
+        tools:layout_editor_absoluteX="250dp"
+        tools:layout_editor_absoluteY="0dp" />
 
 </android.support.constraint.ConstraintLayout>
